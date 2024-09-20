@@ -1,0 +1,10 @@
+---
+import { formatList } from "astro/runtime/server/render/util.js";
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+    <p>Written by {frontmatter.author}</p>
+    <slot />
+</BaseLayout>
